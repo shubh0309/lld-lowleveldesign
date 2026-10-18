@@ -1,0 +1,156 @@
+{
+  "repo_notes": [
+    {
+      "content": "This is a Java 21 / Maven learning repository for Low Level Design (LLD). It has two halves: (1) design-principle and design-pattern examples under src/main/java/com/conceptcoding/ (video1solid, creationalpatterns, structuralpatterns, behavioralpatterns, additionalpatterns), mostly as problem/violation vs solution pairs, and (2) full LLD interview problems under src/main/java/com/conceptcoding/interviewquestions/, one package per system. The interview problems are the highest priority and should be documented in depth.",
+      "author": "Repository owner"
+    },
+    {
+      "content": "Every package under src/main/java/com/conceptcoding/interviewquestions/ has a README.md that documents its entry point, folder structure, every class and its design notes. Use these READMEs as the primary source for page structure, then verify and expand from the Java source. The root README.md indexes all packages.",
+      "author": "Repository owner"
+    },
+    {
+      "content": "There is no single application entry point: every LLD problem and pattern example is a standalone demo with its own main method (e.g. ChessDemo, PlayGame, ATMRoom, BookMyShowApp, ParkingLotClient, PaymentGateway, Demo). For each LLD page include: problem statement and requirements, entry point and what the demo does, a Mermaid class diagram of the main classes and relationships, a Mermaid sequence or state diagram of the main flow, the design patterns used and why, concurrency/thread-safety handling where present, and known simplifications or extension points.",
+      "author": "Repository owner"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Overview",
+      "purpose": "Explain the repository's purpose and layout (patterns vs LLD interview problems), Java 21 / Maven setup from pom.xml, how to run any demo via its main class from an IDE, and a navigation table of every LLD system with its package and entry point."
+    },
+    {
+      "title": "SOLID Principles",
+      "purpose": "Document src/main/java/com/conceptcoding/video1solid: each SOLID principle (single responsibility, open/closed, Liskov substitution, interface segregation, dependency inversion) with its violation vs solution classes and why the solution is better."
+    },
+    {
+      "title": "Creational Patterns",
+      "purpose": "Document src/main/java/com/conceptcoding/creationalpatterns: singleton (including double-checked locking fix), simple factory, factory method, abstract factory, builder, prototype and object pool, with problem vs solution classes and class diagrams."
+    },
+    {
+      "title": "Structural Patterns",
+      "purpose": "Document src/main/java/com/conceptcoding/structuralpatterns: adapter, bridge, composite (file structure, math expression), decorator, facade, flyweight (word processor, robotic game) and proxy, with problem vs solution classes and class diagrams."
+    },
+    {
+      "title": "Behavioral Patterns",
+      "purpose": "Document src/main/java/com/conceptcoding/behavioralpatterns: strategy, observer, state (vending machine), command, chain of responsibility, iterator, mediator, memento, template method, visitor and interpreter, with problem vs solution classes and class diagrams."
+    },
+    {
+      "title": "Additional Patterns",
+      "purpose": "Document src/main/java/com/conceptcoding/additionalpatterns: null object pattern and MVC, with their problem/solution and model/view/controller classes."
+    },
+    {
+      "title": "LLD Interview Problems",
+      "purpose": "Introduce the src/main/java/com/conceptcoding/interviewquestions/ package: a comparison table of all 13 systems (ATM, BookMyShow, Car Rental, Chess, Coupon Application, Cricbuzz, Elevator, Meeting Scheduler, Parking Lot, Payment Gateway, Snake and Ladder, Splitwise, Tic-Tac-Toe) listing entry point, core entities, design patterns used and whether concurrency is handled."
+    },
+    {
+      "title": "ATM System",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/atm/ (ATMRoomComponents/ATMRoom.main; ATM singleton, card/bank account/user, ATM states, cash withdrawal processors, enums). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/atm/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "BookMyShow",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/book_my_show/ (BookMyShowApp.main; controller/service/entity layering for theatres, screens, shows, seats, bookings and payments). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/book_my_show/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Car Rental System",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/carrental/ (Demo.main; VehicleRentalSystem, Store facade, vehicle inventory, reservations, billing and payment strategies). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/carrental/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Chess",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/chess/ (ChessDemo.main; Game, Board, Cell, Position, Move, Player and polymorphic Piece subclasses with isValidMove). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/chess/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Coupon Application",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/couponappln/ (Demo.main; ShoppingCart, products and decorator-based stackable coupons). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/couponappln/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Cricbuzz",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/cricbuzz/ (Demo.main; Match, MatchType (T20/ODI), innings, overs, balls, teams, players and scorecards). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/cricbuzz/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Elevator System",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/elevator/ (Demo.main; Building, floors, external/internal buttons and dispatchers, elevator controllers, cars, doors and selection strategies). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/elevator/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Meeting Scheduler",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/meetingscheduler/ (Demo.main; MeetingScheduler, meetings, rooms, calendars, time intervals, users and notifications). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/meetingscheduler/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Parking Lot",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/parking_lot/ (ParkingLotClient.main; ParkingLot facade, building/levels, gates, spot managers, tickets, lookup/pricing/payment strategies). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/parking_lot/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Payment Gateway",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/paymentgateway/ (PaymentGateway.main; user, instrument (bank/card) and transaction controllers, services, models and DOs). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/paymentgateway/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Snake and Ladder",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/snakeNladder/ (SnakeNLadderDemo.main; Game, Board, Cell, Jump (snakes and ladders), Dice and Player turn order). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/snakeNladder/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Splitwise",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/splitwise/ (Demo.main; users, groups, expenses, split types and validators, balance sheets). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/splitwise/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "Tic-Tac-Toe",
+      "purpose": "Deep dive into src/main/java/com/conceptcoding/interviewquestions/tictactoe/ (PlayGame.main; TicTacToeGame, Board, Player, PlayingPiece X/O and win detection). Cover requirements, entry point and demo flow, Mermaid class diagram, main flow diagram, every class's responsibility, design patterns and trade-offs, and possible extensions. Use src/main/java/com/conceptcoding/interviewquestions/tictactoe/README.md as the starting point.",
+      "parent": "LLD Interview Problems"
+    },
+    {
+      "title": "ATM State Machine and Cash Dispensing",
+      "purpose": "Detail the ATMState hierarchy (IdleState, HasCardState, SelectOperationState, CashWithdrawalState, CheckBalanceState) as a Mermaid state diagram with allowed transitions, and the chain of responsibility TwoThousand → FiveHundred → OneHundred withdraw processors with a worked example.",
+      "parent": "ATM System"
+    },
+    {
+      "title": "BookMyShow Seat Locking and Booking Flow",
+      "purpose": "Detail the booking sequence from search to payment, the seat lifecycle AVAILABLE → LOCKED → BOOKED, per-seat locks acquired in sorted order to avoid deadlock, and lock expiry/release behavior.",
+      "parent": "BookMyShow"
+    },
+    {
+      "title": "Car Rental Reservations and Concurrency",
+      "purpose": "Detail VehicleInventoryManager availability checks with DateInterval overlap, per-vehicle ReentrantLock reserve/release, the ReservationStatus lifecycle, and the billing/payment strategy flow.",
+      "parent": "Car Rental System"
+    },
+    {
+      "title": "Cricbuzz Match Simulation and Scorecards",
+      "purpose": "Detail Match → InningDetails → OverDetails → BallDetails simulation, strike rotation, bowler rotation limits from MatchType, and the observer-based BattingScoreUpdater/BowlingScoreUpdater scorecard updates.",
+      "parent": "Cricbuzz"
+    },
+    {
+      "title": "Elevator Scheduling and Concurrency",
+      "purpose": "Detail how external requests are dispatched via ElevatorSelectionStrategy (NearestElevatorStrategy, LeastBusyStrategy), the InternalDispatcher singleton, per-controller threads with up/down priority queues and wait/notify, and door/direction state.",
+      "parent": "Elevator System"
+    },
+    {
+      "title": "Parking Lot Strategies and Thread Safety",
+      "purpose": "Detail the entry/exit flow, spot lookup, pricing and payment strategies, spot managers per vehicle type, and per-spot-manager ReentrantLock thread safety.",
+      "parent": "Parking Lot"
+    },
+    {
+      "title": "Payment Gateway Layering and Transactions",
+      "purpose": "Detail the controller → service → model layering, InstrumentServiceFactory selection of BankService/CardService, the transaction processing flow and status, and in-memory storage.",
+      "parent": "Payment Gateway"
+    },
+    {
+      "title": "Splitwise Expense Splitting and Balances",
+      "purpose": "Detail equal/unequal/percentage split validation via SplitFactory, how BalanceSheetController updates UserExpenseBalanceSheet per expense, and a worked example of balances after several expenses.",
+      "parent": "Splitwise"
+    },
+    {
+      "title": "Concurrency Across LLD Designs",
+      "purpose": "Compare concurrency handling across BookMyShow, Car Rental, Elevator and Parking Lot (locks, concurrent maps, threads, wait/notify, deadlock avoidance), and note designs that are single-threaded.",
+      "parent": "LLD Interview Problems"
+    }
+  ]
+}
